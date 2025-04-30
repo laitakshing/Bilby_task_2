@@ -105,7 +105,7 @@ sh start.sh
 
 ### Output Schema
 
-The final output is a JSON file (final_entities.json) containing a list of documents with their extracted and matched entities:
+The final output is a JSON file (final_entities.json) containing a list of documents with their extracted and matched entities(You can see `sample_output.json`):
 ```json
 [
   {
