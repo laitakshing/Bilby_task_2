@@ -73,7 +73,16 @@ cd bilby-entity-pipeline
 ```console
 cp .env.example .env
 ```
-Edit .env if you need to adjust `AIRFLOW_HOME` or other settings
+Edit .env if you need to adjust `AIRFLOW_HOME` or other settings.
+
+E.g.
+```env
+AIRFLOW_VERSION=2.10.5
+AIRFLOW__CORE__LOAD_EXAMPLES=false
+AIRFLOW_HOME=/Users/tak/Desktop/Tak/interview/Bilby/final_task/
+PYTHONPATH=${AIRFLOW_HOME}
+DOCKER_URL=unix:///Users/tak/.docker/run/docker.sock
+```
 
 #### 3. Build the Docker image for extraction use
 ```console
