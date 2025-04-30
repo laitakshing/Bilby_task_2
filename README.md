@@ -1,7 +1,8 @@
 # Bilby Entity Extraction Pipeline
 
 This repository implements a proof-of-concept entity extraction and matching pipeline using Apache Airflow, Docker, and a pre-trained GLiNER model. It reads raw documents, splits them into manageable chunks, extracts entities in parallel via a Docker container, matches them against a Source-of-Truth aliases table, and assembles the final nested output.
-![image](https://github.com/user-attachments/assets/b10499c4-c20f-43d0-86b3-7d756ee453ea)
+![image](https://github.com/user-attachments/assets/aa98cd4d-6567-40ed-b78f-d3d1508cfd5d)
+
 
 
 ## Project Structure
