@@ -161,3 +161,7 @@ rm -rf data/in/* data/out/* data/matched/* data/output/*
 ```
 
 •	Designed to scale via batch streaming and dynamic task mapping.
+
+## TODO
+- Add a simple pytest suite and a GitHub Actions workflow to run tests on every push.
+- Include flake8 or black code style checks in the CI pipeline.
