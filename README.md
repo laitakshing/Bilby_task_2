@@ -2,6 +2,33 @@
 
 This repository implements a proof-of-concept entity extraction and matching pipeline using Apache Airflow, Docker, and a pre-trained GLiNER model. It reads raw documents, splits them into manageable chunks, extracts entities in parallel via a Docker container, matches them against a Source-of-Truth aliases table, and assembles the final nested output.
 
+## Project Structure
+```
+.
+├── dags/
+│   └── entity_pipeline.py
+├── pipelines/
+│   ├── split_docs.py
+│   ├── match_entities.py
+│   └── assemble.py
+├── logs/
+├── docker/
+│   ├── Dockerfile
+│   └── extract.py
+├── data/
+│   ├── documents.csv
+│   ├── entity_aliases.csv
+│   ├── in/
+│   ├── out/
+│   ├── matched/
+│   └── output/
+├── logs/
+├── .env.example
+├── start.sh
+├── pyproject.toml
+└── README.md
+```
+
 ## Pipeline Design
 This pipeline consists of four core stages, each implemented as a separate Airflow task or operator:
 1. Batch Ingestion (`split_documents`)
@@ -53,7 +80,9 @@ docker build -t extractor:latest extractor/
 
 #### 4. Start Airflow
 ```console
-uv run –env-file .env airflow standalone
+uv run --env-file .env airflow standalone
+# or
+sh start.sh
 ```
 #### 5.	Activate the DAG
 
